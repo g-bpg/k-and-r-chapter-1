@@ -1,2 +1,2 @@
-Chapter 1; Section 1.03; Page 013; Exercise 1-03
+Chapter 1; Section 1.02; Page 013; Exercise 1-03
 Modify the temperature conversion program to print a heading above the table.
