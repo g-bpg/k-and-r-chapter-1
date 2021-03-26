@@ -1,2 +1,2 @@
-Chapter 1; Section 1.01; Page 013; Exercise 1-04
+Chapter 1; Section 1.02; Page 013; Exercise 1-04
 Write a program to print the corresponding Celcius to Fahrenheit table.
