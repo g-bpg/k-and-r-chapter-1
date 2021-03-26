@@ -17,7 +17,10 @@ If you *must* use a different license for some ungodly reason put a POSIX shell 
      -  _exercise.txt
      - [github username].c
 
-`_exercise.txt` will contain the page number and text detailing the exercise, `[github username].c` will be your solution to the exercise.
-If it requires a certain compiler or compilation options put them in a comment somewhere in the code.
+`_exercise.txt` will contain the chapter number, section number, page number, exercise number, and text detailing the exercise.
+
+`[github username].c` will be your solution to the exercise,
+if it requires a certain compiler or compilation options put them in a comment somewhere in the code.
 In the case that your code has more than one file, create a folder within the exercise folder with the name of your GitHub username and then title the files in there whatever you like, provided there's a Makefile to build the program.
-Obfuscation is cool and funny so long as it's explained far enough to compile+run the program.1
+
+Obfuscation is cool and funny so long as it's explained far enough to compile+run the program.
