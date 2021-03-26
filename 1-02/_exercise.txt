@@ -1,0 +1,2 @@
+Chapter 1; Page 008
+Experiment to find out waht happens when `printf`'s argument string contains *\c*, where *c* is some character not listed above.
