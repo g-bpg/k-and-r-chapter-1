@@ -1,6 +1,6 @@
 # K&R Study Group
 
-Send all complaints to /dev/null (*preferably*), the Issues tab in GitHub, or the [Discord server](http://placeholder).
+Send all complaints to /dev/null (*preferably*), the Issues tab in GitHub, or the [Discord server](https://discord.gg/YfBUDU7GYn).
 
 ## Conduct
 
