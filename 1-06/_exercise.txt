@@ -1,0 +1,2 @@
+Chapter 1; Section 1.05; Page 017; Exercise 1-06
+Verify that the expression `getchar() != EOF` is 0 or 1.
