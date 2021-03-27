@@ -1,0 +1,5 @@
+program: veronika.cpp
+    gcc veronika.cpp -o veronika.elf
+
+run: veronika
+     veronika.elf
