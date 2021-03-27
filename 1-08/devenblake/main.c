@@ -8,8 +8,8 @@
 #define TBCHARS "\t" /* tab characters */
 #define NLCHARS "\n" /* newline characters */
 
-/* from the coreutils manpage:
- * a word is a non-zero-length sequence of characters delimited by a space */
+/* GNU says: */
+/* a word is a non-zero-length sequence of characters delimited by a space */
 
 /* check if c is in str */
 /* returns 0 if false, index+1 of c in str if true */
@@ -62,8 +62,13 @@ int main(void){
 
 	/* it's not this program's job to sort this shit */
 	fprintf(output,
-		"%d\t"  "%d\t" "%d\t"      "%d\t"    "%d\t" "%d\t" "\n",
-		blanks, chars, maxlinelen, newlines, tabs,  words
+		"%d\t"    "%d\t" "%d\t" "-1\t"       "%d\t"      "%d\t" "%d\t" "\n",
+		newlines, words, chars, /* bytes, */ maxlinelen, tabs,  blanks
+		/* this should be compatible with GNU wc with  |  * GNU wc doesn't |
+		 * no options. so anything awking nl thru      |  * do these      */
+		/* maxnl should be good as long as it doesn't  |
+		 * want bytes or refers relative to the end of |
+		 * the line.                                  */
 	);
 
 	return 0;
