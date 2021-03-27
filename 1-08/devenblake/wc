@@ -1,5 +1,12 @@
 #!/bin/sh
 
+which nawk >/dev/null 2>&1 && awk="nawk" || awk="awk"
+if [ -e "./counter" ]; then
+	counter="./counter"
+else
+	printf "Either change the \$counter variable within this wc implementation or cd to the folder where you've built counter.\n" >/dev/null
+fi
+
 usage() {
 	printf "Usage: $0 [ -h ] [ FILE ... ]\n"
 	exit 1
@@ -13,13 +20,13 @@ usage() {
 counter_output="$("$counter" <"$file")"
 
 # REEEEEEEE REPEATED CODE!!!!
-  newlines=$(printf "$counter_output" | awk '{ print $1 }')
-     words=$(printf "$counter_output" | awk '{ print $2 }')
-     chars=$(printf "$counter_output" | awk '{ print $3 }')
-#    bytes=$(printf "$counter_output" | awk '{ print $4 }')
-maxlinelen=$(printf "$counter_output" | awk '{ print $5 }')
-      tabs=$(printf "$counter_output" | awk '{ print $6 }')
-    blanks=$(printf "$counter_output" | awk '{ print $7 }')
+  newlines=$(printf "$counter_output" | "$awk" '{ print $1 }')
+     words=$(printf "$counter_output" | "$awk" '{ print $2 }')
+     chars=$(printf "$counter_output" | "$awk" '{ print $3 }')
+#    bytes=$(printf "$counter_output" | "$awk" '{ print $4 }')
+maxlinelen=$(printf "$counter_output" | "$awk" '{ print $5 }')
+      tabs=$(printf "$counter_output" | "$awk" '{ print $6 }')
+    blanks=$(printf "$counter_output" | "$awk" '{ print $7 }')
 # tag me with a fix if you have one. idk how to do this better.
 
 
