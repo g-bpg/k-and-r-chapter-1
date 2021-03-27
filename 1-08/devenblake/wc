@@ -1,0 +1,24 @@
+#!/bin/sh
+
+usage() {
+	printf "Usage: $0 [ -h ] [ FILE ... ]\n"
+	exit 1
+}
+
+# this is the wrapper on counter that lets it act as a wc clone
+# lacks some features compared to GNU, adds one or two
+# - honestly you could probably implement wc in pure POSIX shell but it'd
+#   probably be brutally slow
+
+counter_output="$("$counter" <"$file")"
+
+# REEEEEEEE REPEATED CODE!!!!
+    blanks=$(printf "$counter_output" | awk '{ print $1 }')
+     chars=$(printf "$counter_output" | awk '{ print $2 }')
+maxlinelen=$(printf "$counter_output" | awk '{ print $3 }')
+  newlines=$(printf "$counter_output" | awk '{ print $4 }')
+      tabs=$(printf "$counter_output" | awk '{ print $5 }')
+     words=$(printf "$counter_output" | awk '{ print $6 }')
+# tag me with a fix if you have one. idk how to do this better.
+
+
