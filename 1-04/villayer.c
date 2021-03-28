@@ -3,6 +3,9 @@ main(){
 	/* to find the conversion equation
 	 * we invert the equation c=5/9*(f-32)
 	 * we get f=(9c+160)/5
+	 *
+	 * ps: i know there is another way but
+	 * i tried playing with this
 	 */
 
 	float fahr, celsuis;
