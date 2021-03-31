@@ -1,0 +1,2 @@
+Chapter 1; Section 1.5.4; Page 021; Exercise 1-12
+Write a program that prints its input one word per line.
