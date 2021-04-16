@@ -25,14 +25,16 @@
 bool
 charin(const char *str, const char c)
 {
-	int i;
+	size_t i;
 	for(i = 0; i < strlen(str); ++i)
 		if(str[i] == c)
 			return 1;
 	return 0;
 }
 
-int main(void){
+int
+main(void)
+{
 	FILE *input = stdin;
 	FILE *output = stdout;
 	bool inword = 0;
@@ -49,7 +51,7 @@ int main(void){
 	int tabs = 0;
 	int words = 0;
 
-	while(c = getc(input) != EOF){
+	while((c = getc(input)) != EOF){
 		++chars;
 		if(!isblank(c) && !inword)
 			inword = 1;

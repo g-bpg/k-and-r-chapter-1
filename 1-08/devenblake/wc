@@ -5,10 +5,11 @@ if [ -e "./counter" ]; then
 	counter="./counter"
 else
 	printf "Either change the \$counter variable within this wc implementation or cd to the folder where you've built counter.\n" >/dev/null
+	exit 1
 fi
 
 usage() {
-	printf "Usage: $0 [ -h ] [ FILE ... ]\n"
+	printf "Usage: $argv0 [ -h ] [ FILE ... ]\n"
 	exit 1
 }
 
@@ -17,6 +18,7 @@ usage() {
 # - honestly you could probably implement wc in pure POSIX shell but it'd
 #   probably be brutally slow
 
+file=/dev/stdin # shouldfix, probablywontfix
 counter_output="$("$counter" <"$file")"
 
 # REEEEEEEE REPEATED CODE!!!!
@@ -29,4 +31,5 @@ maxlinelen=$(printf "$counter_output" | "$awk" '{ print $5 }')
     blanks=$(printf "$counter_output" | "$awk" '{ print $7 }')
 # tag me with a fix if you have one. idk how to do this better.
 
-
+printf "%4s %4s %4s\n" "$newlines" "$words" "$chars"
+exit 0
