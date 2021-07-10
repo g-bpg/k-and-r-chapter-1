@@ -1,4 +1,4 @@
-
+// compile with `cc -std=c99`
 
 #include <stdio.h>
 #define MAXLINE 1000 /* maximum input line size */
